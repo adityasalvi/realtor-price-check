@@ -26,7 +26,7 @@ public class DriverScript {
 	private static WebDriverWait wait;
 	private static Actions builder;
 	private static String firefoxDriverPath = "./geckodriver.exe";
-	
+	private static String chromeDriverPath = "./chromedriver.exe";
 	private long searchResultsCount = 0;
 	private long searchPagePrice = 0;
 	private long detailsPagePrice = 0;
@@ -36,7 +36,10 @@ public class DriverScript {
    public void I_have_navigated_to_to_website_using_browser(String arg1, String arg2) {
 	   
 	   if(arg2.equals("Chrome"))
-	   		driver = new ChromeDriver(); // Initializing Chrome Driver
+	   {
+		   System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+		   driver = new ChromeDriver(); // Initializing Chrome Driver
+	   }	   		
 	   else
 	   {
 		   System.setProperty("webdriver.gecko.driver", firefoxDriverPath); // Initializing Firefox Driver
