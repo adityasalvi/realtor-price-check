@@ -72,7 +72,7 @@ public class DriverScript {
 	   
 	   searchResultsCount = Integer.parseInt(GenericFunc.getTextFromElement(objFactory.searchResultCount).replaceAll("[A-Za-z ]", ""));
 	   
-	   assertTrue(searchResultsCount > 0);
+	   assertTrue(searchResultsCount > 0); // Verify Search are greater than zero
 	   
    }
 
@@ -102,7 +102,7 @@ public class DriverScript {
 	   
 	   detailsPagePrice = Long.parseLong(GenericFunc.getTextFromElement(objFactory.viewDetailsPrice).replaceAll("[$, ]", ""));
 	   
-	   assertEquals(searchPagePrice, detailsPagePrice);
+	   assertEquals(searchPagePrice, detailsPagePrice); // Verify Price are same for Search and Details page
 	   
    }
 

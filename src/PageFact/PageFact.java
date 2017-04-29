@@ -23,10 +23,6 @@ public class PageFact {
     
     public WebElement searchResultCount;
     
-    //@FindBy(xpath="//*[@id='2']//a[contains(@href,'realestateandhomes')]")
-    
-    //@FindBy(xpath="//*[@id='2']//div[contains(@class,'srp-item-address')]")
-    
     @FindBy(xpath="//*[@id='2']//*[@class='listing-street-address']")
     	
     public WebElement secondLinkAddress;
